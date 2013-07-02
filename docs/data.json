@@ -1,0 +1,49 @@
+{
+    "project": {
+        "name": "geometry",
+        "description": "A 2D Geometry pack to run in the browser",
+        "version": "0.0.1",
+        "url": ""
+    },
+    "files": {
+        "build\\geometry2d.js": {
+            "name": "build\\geometry2d.js",
+            "modules": {},
+            "classes": {
+                "Point": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Point": {
+            "name": "Point",
+            "shortname": "Point",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "build\\geometry2d.js",
+            "line": 1,
+            "description": "Point",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "build\\geometry2d.js",
+            "line": 8,
+            "description": "Hello World",
+            "class": "Point"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nHello World",
+            "line": " build\\geometry2d.js:8"
+        }
+    ]
+}
