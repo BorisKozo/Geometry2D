@@ -55,31 +55,70 @@
     <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="geometry2d.ts" />
+    <TypeScriptCompile Include="src\geometry2d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="geometry2d.js">
+    <TypeScriptCompile Include="src\enums.ts" />
+    <Content Include="src\enums.js">
+      <DependentUpon>enums.ts</DependentUpon>
+    </Content>
+    <Content Include="src\enums.min.js">
+      <DependentUpon>enums.ts</DependentUpon>
+    </Content>
+    <Content Include="src\geometry2d.js">
       <DependentUpon>geometry2d.ts</DependentUpon>
     </Content>
-    <Content Include="geometry2d.min.js">
+    <Content Include="src\geometry2d.min.js">
       <DependentUpon>geometry2d.ts</DependentUpon>
     </Content>
-    <Content Include="Primitives\point.js">
+    <Content Include="src\Primitives\point.js">
       <DependentUpon>point.ts</DependentUpon>
     </Content>
-    <Content Include="Primitives\point.min.js">
+    <Content Include="src\Primitives\point.min.js">
       <DependentUpon>point.ts</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="Primitives\point.ts" />
+    <TypeScriptCompile Include="test\geometry2d.test.ts" />
+    <Content Include="test\geometry2d.test.js">
+      <DependentUpon>geometry2d.test.ts</DependentUpon>
+    </Content>
+    <Content Include="test\geometry2d.test.min.js">
+      <DependentUpon>geometry2d.test.ts</DependentUpon>
+    </Content>
+    <Content Include="test\Primitives\point.test.js">
+      <DependentUpon>point.test.ts</DependentUpon>
+    </Content>
+    <Content Include="test\Primitives\point.test.min.js">
+      <DependentUpon>point.test.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="test\Primitives\point.test.ts" />
+    <TypeScriptCompile Include="src\Primitives\point.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Primitives\point.js.map">
+    <Content Include="src\Primitives\point.js.map">
       <DependentUpon>point.ts</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="geometry2d.js.map">
+    <Content Include="src\geometry2d.js.map">
       <DependentUpon>geometry2d.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\Primitives\point.test.js.map">
+      <DependentUpon>point.test.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="declaration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\enums.js.map">
+      <DependentUpon>enums.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\geometry2d.test.js.map">
+      <DependentUpon>geometry2d.test.ts</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />

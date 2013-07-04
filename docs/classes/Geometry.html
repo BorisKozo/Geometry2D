@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>build\geometry2d.js - geometry</title>
+    <title>Geometry - geometry</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -86,86 +86,63 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: build\geometry2d.js</h1>
+                        <h1>Geometry Class</h1>
+<div class="box meta">
+    
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
-* Point
-*
-* @class Point
-* @constructor
-**/
-var Point = (function () {
-    /**
-    * Creates a new point at (x,y)
-    * @method Point
-    * @param {Number} [x] The x coordinate of the point default 0
-    * @param {Number} [y] The y coordinate of the point default 0
-    * @return {Point} A point at (x,y)
-    **/
-    function Point(x, y) {
-        if (typeof x === &quot;undefined&quot;) { x = 0; }
-        if (typeof y === &quot;undefined&quot;) { y = 0; }
-        this.x = x;
-        this.y = y;
-    }
-    /**
-    * Creates a new Point at the coordinates of this point
-    * @method clone
-    * @return {Point} A new Point at the coordinates of this point
-    **/
-    Point.prototype.clone = function () {
-        return new Point(this.x, this.y);
-    };
-    return Point;
-})();
-/**
-* An enum representing the posible orientation of three points
-* @class Orientation
-*/
-var Orientation;
-(function (Orientation) {
-    Orientation[Orientation[&quot;CW&quot;] = -1] = &quot;CW&quot;;
+    
 
-    Orientation[Orientation[&quot;CCW&quot;] = 1] = &quot;CCW&quot;;
+    
+        <div class="foundat">
+            Defined in: <a href="../files/build_geometry2d.js.html#l45"><code>build\geometry2d.js:45</code></a>
+        </div>
+    
 
-    Orientation[Orientation[&quot;CL&quot;] = 0] = &quot;CL&quot;;
-})(Orientation || (Orientation = {}));
-/// &lt;reference path=&quot;enums.ts&quot;/&gt;
-/// &lt;reference path=&quot;Primitives/point.ts&quot;/&gt;
-/**
-* The Geometry class provides a set of static functions for various
-* geometric queries and manipulations
-* @class Geometry
-**/
-var Geometry = (function () {
-    function Geometry() {
-    }
-    Geometry.orientation = /**
-    * Calculates the orientation of &#x60;&#x60;&#x60;p3&#x60;&#x60;&#x60; with respect to the line between &#x60;&#x60;&#x60;p1&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;p2&#x60;&#x60;&#x60;
-    * @method orientation
-    * @param {Point} p1 The first point
-    * @param {Point} p2 The second point
-    * @param {Point} p3 The third point
-    * @return {Orientation} The orientation of &#x60;&#x60;&#x60;p3&#x60;&#x60;&#x60; with respect to &#x60;&#x60;&#x60;p1&#x60;&#x60;&#x60; to &#x60;&#x60;&#x60;p2&#x60;&#x60;&#x60;
-    **/
-    function (p1, p2, p3) {
-        var ccw = (p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x);
-        if (ccw == 0) {
-            return Orientation.CL;
-        }
+    
 
-        if (ccw &gt; 0) {
-            return Orientation.CCW;
-        }
+    
+</div>
 
-        return Orientation.CW;
-    };
-    return Geometry;
-})();
 
-    </pre>
+
+<div class="box intro">
+    <p>The Geometry class provides a set of static functions for various
+geometric queries and manipulations</p>
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+
+        
+
+        
+
+        
+    </div>
 </div>
 
                     </div>

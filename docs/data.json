@@ -10,7 +10,9 @@
             "name": "build\\geometry2d.js",
             "modules": {},
             "classes": {
-                "Point": 1
+                "Point": 1,
+                "Orientation": 1,
+                "Geometry": 1
             },
             "fors": {},
             "namespaces": {}
@@ -30,20 +32,71 @@
             "line": 1,
             "description": "Point",
             "is_constructor": 1
+        },
+        "Orientation": {
+            "name": "Orientation",
+            "shortname": "Orientation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "build\\geometry2d.js",
+            "line": 31,
+            "description": "An enum representing the posible orientation of three points"
+        },
+        "Geometry": {
+            "name": "Geometry",
+            "shortname": "Geometry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "build\\geometry2d.js",
+            "line": 45,
+            "description": "The Geometry class provides a set of static functions for various\ngeometric queries and manipulations"
         }
     },
     "classitems": [
         {
             "file": "build\\geometry2d.js",
             "line": 8,
-            "description": "Hello World",
+            "description": "Creates a new point at (x,y)",
+            "itemtype": "method",
+            "name": "Point",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The x coordinate of the point default 0",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "The y coordinate of the point default 0",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A point at (x,y)",
+                "type": "Point"
+            },
+            "class": "Point"
+        },
+        {
+            "file": "build\\geometry2d.js",
+            "line": 21,
+            "description": "Creates a new Point at the coordinates of this point",
+            "itemtype": "method",
+            "name": "clone",
+            "return": {
+                "description": "A new Point at the coordinates of this point",
+                "type": "Point"
+            },
             "class": "Point"
         }
     ],
-    "warnings": [
-        {
-            "message": "Missing item type\nHello World",
-            "line": " build\\geometry2d.js:8"
-        }
-    ]
+    "warnings": []
 }

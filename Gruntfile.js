@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         },
         jasmine: {
             main: {
-                src: 'Geometry2D/build/geometry2d.js',
+                src: 'build/geometry2d.js',
                 options: {
                     specs: 'Geometry2D/test/**/*.test.js'
                 }
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 options: {
                     target: 'ES5',
                     module: 'amd',
-                    comments: true
+                    comments: false
                 }
             }
         }
